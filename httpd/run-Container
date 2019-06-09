@@ -1,0 +1,1 @@
+docker run -d -p 18080:8080 --mount src=/root/build/data,target=/var/www/html,type=bind http
