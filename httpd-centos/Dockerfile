@@ -20,6 +20,5 @@ EXPOSE 8080
 HEALTHCHECK --interval=5m --timeout=3s --retries=4 CMD curl -f http://localhost:8080/ || exit 1
 ONBUILD RUN mkdir /tmp/tempo
 ENV CONTAINER_NAME demoContainer
-VOLUME /data
 ENTRYPOINT ["/usr/sbin/httpd"]
 CMD ["-D", "FOREGROUND"]
